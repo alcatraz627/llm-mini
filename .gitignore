@@ -1,0 +1,15 @@
+# State & logs (generated at runtime)
+llm-mini.conf
+*.jsonl
+llm-mini-state/
+
+# OS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Claude checkpoint files
+_*.claude.md

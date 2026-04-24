@@ -1,0 +1,3 @@
+Produce ONE shell command that accomplishes this task. No explanation, no markdown, just the raw command. If multiple steps are needed, chain with && or ;.
+
+Task: {{input}}

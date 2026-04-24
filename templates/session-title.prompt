@@ -1,0 +1,8 @@
+Generate a 3-5 word topic title for this Claude Code session based on the user's initial message. Use imperative form. No quotes, no newline, no explanation. Output ONLY the title.
+
+Examples:
+- "Fix the authentication bug" → Fix Auth Login Bug
+- "Add bar chart to dashboard" → Add Dashboard Bar Chart
+- "Refactor navigation component" → Refactor Nav Component
+
+User message: {{input}}

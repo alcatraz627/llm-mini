@@ -1,0 +1,40 @@
+# llm-mini configuration
+# View:  llm-mini config show
+# Edit:  llm-mini config edit
+# Set:   llm-mini config set key=value
+
+# Backend selection: auto | local | cloud
+#   auto  = try local first, fall back to cloud
+#   local = Ollama only (fast, private)
+#   cloud = Haiku API only (reliable, ~1-2s)
+default_backend=auto
+
+# Default local model (Ollama)
+default_model=llama3.2
+
+# Cloud model identifier
+cloud_model=claude-haiku-4-5-20251001
+
+# Max output tokens
+max_tokens=200
+
+# Request timeout (seconds) — increased automatically for large inputs
+timeout_s=8
+
+# Auto-start Ollama when not running: ask | yes | no
+#   ask = prompt interactively (falls back to cloud in pipes)
+#   yes = start automatically without prompting
+#   no  = always fall back to cloud
+auto_start=ask
+
+# Auto-stop Ollama after N minutes idle (0 = never)
+idle_timeout_min=30
+
+# Show latency after response: true | false
+show_timing=false
+
+# Cloud method: how to reach Haiku when cloud backend is used
+#   auto = API first (faster, ~1-2s, costs credits), CLI fallback
+#   cli  = always use claude -p (subscription, ~2-5s, cheaper)
+#   api  = always use direct API (requires ANTHROPIC_API_KEY)
+cloud_method=cli
