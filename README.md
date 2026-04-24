@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="llm-mini — Fast, local-first AI queries" width="800"/>
+</p>
+
 # llm-mini
 
 Fast, local-first AI query tool. Uses Ollama for sub-second responses with automatic cloud (Haiku) fallback.

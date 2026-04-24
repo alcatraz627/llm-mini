@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="800" height="220">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f7971e"/>
+      <stop offset="100%" style="stop-color:#ffd200"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a8edea"/>
+      <stop offset="50%" style="stop-color:#fed6e3"/>
+      <stop offset="100%" style="stop-color:#d299c2"/>
+    </linearGradient>
+    <linearGradient id="tag" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#11998e"/>
+      <stop offset="100%" style="stop-color:#38ef7d"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="220" rx="12" fill="url(#bg)"/>
+
+  <!-- Decorative dots -->
+  <g opacity="0.06">
+    <circle cx="50" cy="50" r="3" fill="#fff"/>
+    <circle cx="100" cy="30" r="2" fill="#fff"/>
+    <circle cx="150" cy="60" r="2.5" fill="#fff"/>
+    <circle cx="700" cy="40" r="3" fill="#fff"/>
+    <circle cx="750" cy="70" r="2" fill="#fff"/>
+    <circle cx="650" cy="25" r="2.5" fill="#fff"/>
+    <circle cx="680" cy="180" r="2" fill="#fff"/>
+    <circle cx="730" cy="160" r="3" fill="#fff"/>
+    <circle cx="100" cy="190" r="2" fill="#fff"/>
+    <circle cx="60" cy="170" r="2.5" fill="#fff"/>
+  </g>
+
+  <!-- Lightning bolt icon -->
+  <g transform="translate(42, 55)" filter="url(#shadow)">
+    <polygon points="28,0 10,40 22,40 14,72 42,28 28,28 36,0" fill="url(#accent)"/>
+  </g>
+
+  <!-- Title -->
+  <text x="105" y="100" font-family="'SF Mono', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace" font-size="48" font-weight="bold" fill="url(#glow)" filter="url(#shadow)">llm-mini</text>
+
+  <!-- Tagline -->
+  <text x="107" y="135" font-family="'SF Mono', 'Fira Code', 'JetBrains Mono', monospace" font-size="18" fill="#a8b2d1" letter-spacing="1">Fast, local-first AI queries</text>
+
+  <!-- Feature pills -->
+  <g transform="translate(107, 152)">
+    <rect x="0" y="0" width="80" height="26" rx="13" fill="url(#tag)" opacity="0.85"/>
+    <text x="40" y="17" font-family="'SF Mono', monospace" font-size="11" fill="#0f0c29" text-anchor="middle" font-weight="600">Ollama</text>
+
+    <rect x="90" y="0" width="80" height="26" rx="13" fill="url(#accent)" opacity="0.85"/>
+    <text x="130" y="17" font-family="'SF Mono', monospace" font-size="11" fill="#0f0c29" text-anchor="middle" font-weight="600">Haiku</text>
+
+    <rect x="180" y="0" width="65" height="26" rx="13" fill="#6c63ff" opacity="0.85"/>
+    <text x="212" y="17" font-family="'SF Mono', monospace" font-size="11" fill="#fff" text-anchor="middle" font-weight="600">Chat</text>
+
+    <rect x="255" y="0" width="68" height="26" rx="13" fill="#e84393" opacity="0.85"/>
+    <text x="289" y="17" font-family="'SF Mono', monospace" font-size="11" fill="#fff" text-anchor="middle" font-weight="600">Tools</text>
+
+    <rect x="333" y="0" width="62" height="26" rx="13" fill="#00b894" opacity="0.85"/>
+    <text x="364" y="17" font-family="'SF Mono', monospace" font-size="11" fill="#0f0c29" text-anchor="middle" font-weight="600">MCP</text>
+  </g>
+
+  <!-- Terminal prompt -->
+  <g transform="translate(107, 192)">
+    <text font-family="'SF Mono', monospace" font-size="13" fill="#5a6785">
+      <tspan fill="#38ef7d">$</tspan>
+      <tspan dx="6" fill="#a8b2d1">llm-mini "what does jq -r do?"</tspan>
+    </text>
+  </g>
+
+  <!-- Speed badge -->
+  <g transform="translate(620, 60)">
+    <rect x="0" y="0" width="140" height="42" rx="8" fill="#1a1a2e" stroke="url(#accent)" stroke-width="1.5" opacity="0.9"/>
+    <text x="70" y="19" font-family="'SF Mono', monospace" font-size="11" fill="#ffd200" text-anchor="middle" font-weight="600">&lt;500ms</text>
+    <text x="70" y="34" font-family="'SF Mono', monospace" font-size="10" fill="#5a6785" text-anchor="middle">local inference</text>
+  </g>
+</svg>

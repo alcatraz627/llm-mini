@@ -461,12 +461,20 @@ if [[ -n "$INPUT" ]] && [[ ! "$INPUT" =~ [[:space:]] ]] && [[ -f "$INPUT" ]]; th
     INPUT=$(head -c 32000 "$INPUT")
 fi
 
-# Fill from captured stdin (truncate to 32K to avoid API limits)
-if [[ -z "$INPUT" ]] && [[ -n "$STDIN_DATA" ]]; then
-    INPUT="$STDIN_DATA"
-    if [[ ${#INPUT} -gt 32000 ]]; then
-        INPUT="${INPUT:0:32000}"
+# Merge captured stdin with any explicit prompt
+if [[ -n "$STDIN_DATA" ]]; then
+    # Truncate large pipe input to avoid API limits
+    if [[ ${#STDIN_DATA} -gt 32000 ]]; then
+        STDIN_DATA="${STDIN_DATA:0:32000}"
         echo "llm-mini: input truncated to 32000 chars" >&2
+    fi
+    if [[ -n "$INPUT" ]]; then
+        # Both pipe and prompt: prompt is the instruction, stdin is the content
+        INPUT="${INPUT}
+
+${STDIN_DATA}"
+    else
+        INPUT="$STDIN_DATA"
     fi
 fi
 
