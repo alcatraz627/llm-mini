@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="llm-mini — Fast, local-first AI queries" width="800"/>
+  <img src=".github/readme/banner.svg" alt="llm-mini banner: The crew as computers" width="100%">
 </p>
 
-# llm-mini
+# <img src=".github/readme/favicon.svg" alt="" width="32" height="32"> llm-mini
 
 Fast, local-first AI query tool. Uses Ollama for sub-second responses with automatic cloud (Haiku) fallback.
 
@@ -12,6 +12,13 @@ git diff | llm-mini summarize           # pipe + template
 llm-mini chat                           # interactive session
 llm-mini engine status                  # manage Ollama
 ```
+
+<details>
+<summary>Riddle answer</summary>
+
+The auto backend: llm-mini asks a local Ollama model first and falls back to cloud Haiku.
+
+</details>
 
 ## Install
 
